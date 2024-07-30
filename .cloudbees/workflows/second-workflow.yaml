@@ -19,4 +19,4 @@ jobs:
       - name: My second step
         uses: docker://alpine:3.18
         id: step2
-        run: echo "from the hive" > "$CLOUDBEES_OUTPUTS/greeting"
+        run: echo "from the hivehhhhhhh" > "$CLOUDBEES_OUTPUTS/greeting"
