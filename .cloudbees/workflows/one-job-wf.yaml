@@ -3,7 +3,9 @@ kind: workflow
 name: My workflowab comit
 on:
   workflow_dispatch:
-
+  push:
+      branches:
+        - main
 jobs:
   my-job-1:
     outputs:
