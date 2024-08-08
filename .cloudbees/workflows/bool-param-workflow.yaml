@@ -6,6 +6,7 @@ on:
     inputs:
       boolparam:
         type: boolean
+        default: true
         required: true
 jobs:
   build:
