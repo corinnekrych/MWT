@@ -3,6 +3,16 @@ kind: workflow
 name: My workflowab comit
 on:
   workflow_dispatch:
+    inputs:
+      stringIn:
+        type: choice
+        options:
+          - abc
+          - def
+          - ghi
+        default: abc
+        required: true
+        description: Pick list desciption
   push:
     branches:
       - main
@@ -15,8 +25,6 @@ jobs:
       - name: My first step
         uses: docker://alpine:3.18
         id: step1
-        run: echo "hello there" > "$CLOUDBEES_OUTPUTS/greeting"
-      - name: My second step
-        uses: docker://alpine:3.18
-        id: step2
-        run: echo "from the 4" > "$CLOUDBEES_OUTPUTS/greeting"
+        run: |
+          echo "stringIn is '${{ inputs.stringIn }}'"
+          echo "pickList is '${{ inputs.pickList }}'"
