@@ -4,7 +4,7 @@ name: My workflowab comit
 on:
   workflow_dispatch:
     inputs:
-      stringIn:
+      pickList:
         type: choice
         options:
           - abc
@@ -26,5 +26,4 @@ jobs:
         uses: docker://alpine:3.18
         id: step1
         run: |
-          echo "stringIn is '${{ inputs.stringIn }}'"
           echo "pickList is '${{ inputs.pickList }}'"
