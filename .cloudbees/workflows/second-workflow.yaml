@@ -5,8 +5,9 @@ on:
   workflow_dispatch:
     inputs:
       value1:
-        type: boolean
+        type: number
         required: true
+        default: 9223372036854775807
 
 jobs:
   my-job-1:
