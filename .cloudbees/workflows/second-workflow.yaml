@@ -4,18 +4,9 @@ name: My workflowab comit
 on:
   workflow_dispatch:
     inputs:
-      pickList:
-        type: choice
-        options:
-          - abc
-          - def
-          - ghi
-        default: abc
-        required: true
-        description: Pick list desciption
-  push:
-    branches:
-      - main
+      value1:
+        type: boolean
+
 jobs:
   my-job-1:
     outputs:
