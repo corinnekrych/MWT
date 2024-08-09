@@ -5,10 +5,7 @@ on:
   workflow_dispatch:
     inputs:
       value1:
-        type: number
-        required: true
-        default: 9223372036854775807
-
+        type: string
 jobs:
   my-job-1:
     steps:
