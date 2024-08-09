@@ -6,6 +6,7 @@ on:
     inputs:
       value1:
         type: boolean
+        required: true
 
 jobs:
   my-job-1:
