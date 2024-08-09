@@ -17,4 +17,4 @@ jobs:
         uses: docker://alpine:3.18
         id: step1
         run: |
-          echo "pickList is '${{ inputs.pickList }}'"
+          echo "boo'"
